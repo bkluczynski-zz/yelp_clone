@@ -35,3 +35,17 @@ context 'creating restaurants' do
 
   end
 end
+
+context 'viewing restaurants' do
+  let!(:kfc){ Restaurant.create(name:'KFC') }
+  scenario 'should allows the user to click on the restaurant name and go to the dedidacted profile page' do
+  visit('/restaurants')
+  click_link 'KFC'
+  expect(page).to have_content("KFC")
+  expect(current_path).to eq("/restaurants/#{kfc.id}")
+
+
+
+  end
+
+end
