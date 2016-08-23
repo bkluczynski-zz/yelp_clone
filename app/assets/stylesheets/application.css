@@ -12,6 +12,7 @@
  *
  *= require normalize.css.scss
  *= require grid.css.scss
+ *= require nav.css.scss
  *= require_tree .
 
  */

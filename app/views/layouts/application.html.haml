@@ -7,13 +7,22 @@
     = csrf_meta_tags
 
   %body
-    = notice
-    = alert
-    = link_to "Home", root_path
-    - if user_signed_in?
-      = link_to "Sign Out", destroy_user_session_path, method: :delete
-    - else
-      = link_to "Sign In", new_user_session_path
-      = link_to "Sign Up", new_user_registration_path
-      = link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path
-    = yield
+    %div.notice
+      = notice
+    %div.alert
+      = alert
+    %div.nav
+      %ul
+        %li.logo
+          = link_to "Yelp-Clone", root_path
+          - if user_signed_in?
+            %li.right
+              = link_to "Sign Out", destroy_user_session_path, method: :delete
+          - else
+            %li.right
+              = link_to "Sign In", new_user_session_path
+            %li.right
+              = link_to "Sign Up", new_user_registration_path
+            %li.right
+              = link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path
+          = yield
