@@ -1,3 +1,6 @@
-%p= @restaurant.name
-%p= @restaurant.description
-= link_to "Edit #{@restaurant.name}", edit_restaurant_path(@restaurant)
+%h2= @restaurant.name
+%h4= @restaurant.description
+- @restaurant.reviews.all.each do |review|
+  %p= review.thoughts
+  = review.rating
+%p= link_to "Edit #{@restaurant.name}", edit_restaurant_path(@restaurant)
