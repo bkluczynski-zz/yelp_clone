@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.3.1'
+
 gem 'rails', '4.2.7.1'
 gem 'pg', '~> 0.15'
 gem 'sass-rails', '~> 5.0'
@@ -14,6 +16,7 @@ gem 'haml'
 gem 'dotenv-rails', group: [:development, :test]
 gem 'devise'
 gem 'omniauth-facebook'
+gem 'rails_12factor'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
