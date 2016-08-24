@@ -11,6 +11,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml'
+gem 'dotenv-rails', group: [:development, :test]
 gem 'devise'
 gem 'omniauth-facebook'
 # Use ActiveModel has_secure_password
@@ -25,7 +26,6 @@ gem 'omniauth-facebook'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'dotenv-rails'
 end
 
 group :development do
