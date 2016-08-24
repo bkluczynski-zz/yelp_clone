@@ -1,7 +1,8 @@
 /*  NAVIGATION   */
 .logo {
   font-size: 1.67em;
-  font-weight: bold; }
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif; }
 
 .nav ul {
   list-style-type: none;
