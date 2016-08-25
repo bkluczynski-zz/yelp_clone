@@ -5,8 +5,12 @@ class Review < ActiveRecord::Base
   validates :rating, inclusion: (1..5)
   validates :user, uniqueness: { scope: :restaurant, message: "You have reviewed this restaurant already" }
 
-  def build_review
+  # def build_review(review_params, user)
+  #   review = reviews.build(review_params)
+  #   review.user = user
+  #   review
+  # end
 
-  end
+
 
 end
