@@ -8,7 +8,10 @@ class Restaurant < ActiveRecord::Base
   validates :name, length: { minimum: 3 }, uniqueness: true
 
   def average_rating
-    'N/A'
+    return 'N/A' if reviews.none?
+    # reviews.average(:rating)
+    reviews.inject(0) {|memo, review| memo + review.rating} / reviews.size
+
   end
 
 end
