@@ -11,7 +11,7 @@ feature 'reviewing' do
     click_link 'Sign Out'
     sign_up_helper('test@example2.com')
     leave_review('Great', '5')
-    expect(page).to have_content "Average rating: 4"
+    expect(page).to have_content "Average rating: ★★★★☆"
   end
 
   scenario 'allows users to leave a review using the form' do
