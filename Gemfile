@@ -16,7 +16,7 @@ gem 'haml'
 gem 'dotenv-rails', group: [:development, :test], :require => 'dotenv/rails-now'
 gem 'devise'
 gem 'omniauth-facebook'
-gem 'rails_12factor'
+gem 'rails_12factor', group: [:production]
 
 group :development, :test do
   gem 'byebug'
