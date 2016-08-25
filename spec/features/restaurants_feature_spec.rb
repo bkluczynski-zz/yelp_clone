@@ -59,30 +59,18 @@ feature 'restaurants' do
 
   context 'a signed in user can' do
     before do
-      visit('/')
-      click_link('Sign Up')
-      fill_in('Email', with: 'test@example.com')
-      fill_in('Password', with: 'testtest')
-      fill_in('Password confirmation', with: 'testtest')
-      click_button('Sign up')
+      sign_up_helper('test@example.com')
     end
 
     scenario 'create a new restaurant' do
-      visit '/'
-      click_link "Add a restaurant"
-      fill_in "Name", with: "KFC"
-      fill_in 'Description', with: 'Deep fried goodness'
-      click_button "Create Restaurant"
+      create_restaurant("KFC")
       expect(page).to have_content "KFC"
       expect(current_path).to eq '/restaurants'
     end
 
     context 'an invalid restaurant raises an error' do
       it "does not let you submit a name that is too short" do
-        visit '/'
-        click_link 'Add a restaurant'
-        fill_in 'Name', with: 'kf'
-        click_button 'Create Restaurant'
+        create_restaurant('kf')
         expect(page).not_to have_css 'h2', text: 'kf'
         expect(page).to have_content 'error'
       end
