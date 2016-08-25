@@ -1,6 +1,13 @@
 body {
   font-family: 'Open Sans', sans-serif; }
 
+a {
+  text-decoration: none;
+  color: black; }
+
+.add_restaurant {
+  text-align: center; }
+
 /*  FORMS   */
 form {
   font-family: 'Open Sans', sans-serif;
@@ -29,6 +36,17 @@ textarea {
 label {
   font-size: 1.16em;
   /*font-weight: bold;*/ }
+
+.button_styled {
+  background-color: rgba(66, 133, 244, 0.7);
+  border: none;
+  border-radius: 3px;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif; }
 
 /* Rating Radio Stars */
 .rating {
