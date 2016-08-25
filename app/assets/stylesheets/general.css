@@ -29,3 +29,11 @@ textarea {
 label {
   font-size: 1.16em;
   /*font-weight: bold;*/ }
+
+/* Rating Radio Stars */
+.rating {
+  float: left; }
+
+.rating input {
+  display: block;
+  overflow: hidden; }
