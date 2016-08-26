@@ -2,11 +2,12 @@
   %div.col-3
     %br
   %div.col-6
-    = form_for @restaurant do |f|
+    = form_for @restaurant, html: {multipart: true} do |f|
       = f.label :name
       = f.text_field :name
       = f.label :description
       = f.text_area :description
+      = f.file_field :image
       = f.submit
 
   %div.col-3

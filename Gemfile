@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 
 ruby '2.3.1'
 
+
+gem 'paperclip'
 gem 'rails', '4.2.7.1'
 gem 'pg', '~> 0.15'
 gem 'sass-rails', '~> 5.0'

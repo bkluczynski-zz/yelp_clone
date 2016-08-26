@@ -6,6 +6,8 @@
       - @restaurants.each do |restaurant|
         %h2= link_to restaurant.name, restaurant_path(restaurant)
         %h4= restaurant.description
+        %h4= image_tag restaurant.image.url(:thumb)
+
 
         %ul
           - restaurant.reviews.each do |review|
